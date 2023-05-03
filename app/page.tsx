@@ -100,10 +100,10 @@ const TableRow = (company) => {
     <tr>
       <td className="px-6 py-4 whitespace-no-wrap">
         <div className="flex items-center">
-          <div className="flex-shrink-0 h-10 w-10">
+          <div className="flex-shrink-0 h-16 w-16">
             <img
               loading="lazy"
-              className="h-10 w-10 rounded-full"
+              className="h-16 w-16"
               src={`/logos/${formatFilePath(company.name)}.jpg`}
               alt={company.name}
             />
@@ -119,7 +119,7 @@ const TableRow = (company) => {
         </div>
       </td>
       <td className="px-6 py-4">
-        <div className="text-sm leading-5 text-gray-900 min-w-[400px]">
+        <div className="text-sm leading-5 text-gray-900 min-w-sm">
           {company.description}
         </div>
       </td>
@@ -130,12 +130,12 @@ const TableRow = (company) => {
           {company.category}
         </span>
       </td>
-      <td className="px-6 py-4 whitespace-no-wrap">
+      {/* <td className="px-6 py-4 whitespace-no-wrap">
         <SocialMedia {...company} />
-      </td>
+      </td> */}
       <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
         <a href={company.careers} className="text-blue-600 hover:text-blue-900">
-          View Jobs
+          Visit
         </a>
       </td>
     </tr>
@@ -144,10 +144,10 @@ const TableRow = (company) => {
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col px-8 mb-8">
+    <div className="flex flex-col px-8 max-w-7xl mb-8 mx-auto">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-          <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+          <div className="shadow overflow-hidden border-b border-gray-400 sm:rounded-lg">
             <table className="min-w-full divide-y divide-gray-200">
               <thead>
                 <tr>
@@ -160,9 +160,9 @@ export default function HomePage() {
                   <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
                     Type
                   </th>
-                  <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                  {/* <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
                     Social
-                  </th>
+                  </th> */}
                   <th className="px-6 py-3 bg-gray-100"></th>
                 </tr>
               </thead>

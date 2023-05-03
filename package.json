@@ -5,11 +5,6 @@
     "build": "next build",
     "start": "next start"
   },
-  "dependencies": {
-    "next": "12.3.2-canary.30",
-    "react": "0.0.0-experimental-9cdf8a99e-20221018",
-    "react-dom": "0.0.0-experimental-9cdf8a99e-20221018"
-  },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.7",
     "@types/node": "18.11.2",
@@ -24,5 +19,10 @@
     "singleQuote": true,
     "tabWidth": 2,
     "trailingComma": "none"
+  },
+  "dependencies": {
+    "next": "^13.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

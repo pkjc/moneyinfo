@@ -4,9 +4,9 @@ import Link from 'next/link';
 export default function RootLayout({ children }) {
   const meta = {
     title:
-      'dsmtech - The best tech companies and startups in the Greater Des Moines area.',
+      'moneyinfo - The best personal finance resources.',
     description:
-      'Discover 40+ of the best tech companies and startups in Des Moines with direct links to their careers pages.',
+      'Discover 50+ of the best personal finance resources.',
     cardImage: '/og.jpg'
   };
 
@@ -29,14 +29,14 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.cardImage} />
       </head>
-      <body className="bg-gray-100">
+      <body className="bg-gray-200">
         <nav>
           <a href="#skip" className="sr-only focus:not-sr-only">
             Skip to content
           </a>
           <div className="flex justify-between items-center p-8 mx-2">
             <Link href="/" className="no-underline font-semibold">
-              <h1>dsmtech</h1>
+              <h1>moneyinfo</h1>
             </Link>
             <ul className="flex justify-between items-center space-x-4">
               <li>
