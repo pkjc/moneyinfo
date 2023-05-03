@@ -4,7 +4,7 @@
 
 @media only screen and (max-width: 600px) {
     .tr-class {
-        @apply flex flex-col mb-4 w-full;
+        @apply flex flex-col mb-4 w-full pt-5 pb-2;
     }
     .tr-class-h {
         @apply hidden

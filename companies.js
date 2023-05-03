@@ -1,6 +1,6 @@
 export const COMPANIES = [
   {
-    name: 'Hy-Vee',
+    name: 'Khan Academy',
     category: 'Private',
     description:
       'Hy-Vee is an employee-owned chain of more than 245 supermarkets located throughout the Midwest.',
@@ -9,10 +9,10 @@ export const COMPANIES = [
     twitter: 'hyvee',
     linkedin: 'hy-vee',
     careers: 'https://innovate.hy-vee.com/',
-    city: 'Grimes'
+    city: 'Course'
   },
   {
-    name: 'Dwolla',
+    name: 'Dwolla Some Long Name Goes Here',
     category: 'Startup',
     description:
       "Dwolla's ACH APIs makes it easy to integrate bank transfers. Facilitate ACH payments, or verify customer and bank account information.",

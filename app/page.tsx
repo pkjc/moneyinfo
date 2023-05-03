@@ -114,12 +114,12 @@ const TableRow = (company) => {
               {company.name}
             </div>
             <div className="text-sm leading-5 text-gray-500">
-              {company.city}, IA
+              {company.city}
             </div>
           </div>
         </div>
       </td>
-      <td className="px-6 py-4 whitespace-no-wrap td-class">
+      <td className="pl-6 pr-8 py-4 whitespace-no-wrap td-class max-w-3xl">
         <div className="text-sm leading-5 text-gray-900">
           {company.description}
         </div>
@@ -146,19 +146,19 @@ export default function HomePage() {
         <table className="divide-y divide-gray-200 max-w-7xl mx-auto">
           <thead>
             <tr className='tr-class-h'>
-              <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+              <th className="px-4 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
                 Name
               </th>
-              <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+              <th className="px-4 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
                 Description
               </th>
-              <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+              <th className="px-4 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
                 Type
               </th>
               {/* <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
                 Social
               </th> */}
-              <th className="px-6 py-3 bg-gray-100"></th>
+              <th className="px-4 py-3 bg-gray-100"></th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
