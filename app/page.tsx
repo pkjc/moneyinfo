@@ -88,17 +88,18 @@ const SocialMedia = (company) => {
 };
 
 const TableRow = (company) => {
-  let categoryClassName = 'bg-green-100 text-green-800';
+  let categoryClassName = 'text-green-800';
 
   if (company.category === 'Public') {
-    categoryClassName = 'bg-blue-100 text-blue-800';
+    categoryClassName = 'text-blue-800';
   } else if (company.category === 'Private') {
-    categoryClassName = 'bg-orange-100 text-orange-800';
+    categoryClassName = 'text-orange-800';
   }
 
+
   return (
-    <tr>
-      <td className="px-6 py-4 whitespace-no-wrap">
+    <tr className='tr-class'>
+      <td className="px-6 py-4 whitespace-no-wrap td-class">
         <div className="flex items-center">
           <div className="flex-shrink-0 h-16 w-16">
             <img
@@ -118,25 +119,22 @@ const TableRow = (company) => {
           </div>
         </div>
       </td>
-      <td className="px-6 py-4">
-        <div className="text-sm leading-5 text-gray-900 min-w-sm">
+      <td className="px-6 py-4 whitespace-no-wrap td-class">
+        <div className="text-sm leading-5 text-gray-900">
           {company.description}
         </div>
       </td>
-      <td className="px-6 py-4 whitespace-no-wrap">
+      <td className="px-6 py-4 whitespace-no-wrap td-class">
         <span
-          className={`${categoryClassName} px-2 inline-flex text-xs leading-5 font-semibold rounded-full`}
+          className={`${categoryClassName} px-2 inline-flex text-xs leading-5 font-semibold `}
         >
           {company.category}
         </span>
       </td>
-      {/* <td className="px-6 py-4 whitespace-no-wrap">
-        <SocialMedia {...company} />
-      </td> */}
-      <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
-        <a href={company.careers} className="text-blue-600 hover:text-blue-900">
-          Visit
-        </a>
+      <td className="px-6 py-4 whitespace-no-wrap td-class">
+        <button className="h-6 px-4 font-semibold rounded-full bg-violet-600 text-white text-right text-sm leading-5 text-xs " type="submit">
+          <a href={company.careers} className="">Visit</a>
+        </button>
       </td>
     </tr>
   );
@@ -144,41 +142,35 @@ const TableRow = (company) => {
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col px-8 max-w-7xl mb-8 mx-auto">
-      <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-          <div className="shadow overflow-hidden border-b border-gray-400 sm:rounded-lg">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead>
-                <tr>
-                  <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-                    Name
-                  </th>
-                  <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-                    Description
-                  </th>
-                  <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-                    Type
-                  </th>
-                  {/* <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-                    Social
-                  </th> */}
-                  <th className="px-6 py-3 bg-gray-100"></th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {COMPANIES.sort((a, b) => {
-                  if (a.name < b.name) {
-                    return -1;
-                  }
-                }).map((company) => (
-                  <TableRow key={company.name} {...company} />
-                ))}
-              </tbody>
-            </table>
-          </div>
+    <div className="flex items-center sm:justify-center mx-4">
+        <table className="divide-y divide-gray-200 max-w-7xl mx-auto">
+          <thead>
+            <tr className='tr-class-h'>
+              <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                Name
+              </th>
+              <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                Description
+              </th>
+              <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                Type
+              </th>
+              {/* <th className="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                Social
+              </th> */}
+              <th className="px-6 py-3 bg-gray-100"></th>
+            </tr>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {COMPANIES.sort((a, b) => {
+              if (a.name < b.name) {
+                return -1;
+              }
+            }).map((company) => (
+              <TableRow key={company.name} {...company} />
+            ))}
+          </tbody>
+        </table>
         </div>
-      </div>
-    </div>
   );
 }
