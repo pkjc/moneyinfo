@@ -8,11 +8,11 @@ export const COMPANIES = [
     instagram: 'hyvee',
     twitter: 'hyvee',
     linkedin: 'hy-vee',
-    careers: 'https://innovate.hy-vee.com/',
+    careers: 'https://www.khanacademy.org/',
     city: 'Course'
   },
   {
-    name: 'Dwolla Some Long Name Goes Here',
+    name: 'Dwolla Some Long Name',
     category: 'Startup',
     description:
       "Dwolla's ACH APIs makes it easy to integrate bank transfers. Facilitate ACH payments, or verify customer and bank account information.",
