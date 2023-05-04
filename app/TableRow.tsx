@@ -40,7 +40,7 @@ const TableRow = (company) => {
               </div>
             </div>
           </td>
-          <td className="pl-6 pr-8 py-4 whitespace-no-wrap td-class max-w-3xl">
+          <td className="pl-6 sm:pl-4 pr-10 py-4 whitespace-no-wrap td-class max-w-3xl">
             <div className="text-sm leading-5 text-gray-900">
               {company.description}
             </div>
